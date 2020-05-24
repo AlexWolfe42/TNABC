@@ -1,0 +1,80 @@
+body {
+  font-family: "Open Sans", "sans-serif";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #bd0d0de5, #192985e1); }
+
+h1, h2, h3 {
+  font-family: "Solway", "serif"; }
+
+h2 {
+  font-style: italic; }
+
+.jumbotron {
+  margin: 0;
+  padding: 30px;
+  background-image: linear-gradient(to right, #192985e1, #bd0d0de5);
+  color: white; }
+
+.navbar {
+  background-color: #e9ecefd2; }
+  .navbar .navbar-toggler:active {
+    border-color: rgba(0, 0, 0, 0.1); }
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px; }
+
+.pad-section {
+  padding: 50px 0; }
+
+#indexImg-1, #indexImg-2 {
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#indexImg-1 {
+  background: url(../imgs/restaurant-alcohol-bar-drinks.png) no-repeat center center fixed;
+  height: 30rem; }
+
+#indexImg-2 {
+  background: url(../imgs/beertaps.png) no-repeat center center fixed;
+  height: 30rem; }
+
+.footerLogo {
+  height: auto;
+  width: 1rem; }
+
+/*
+.indexImg-1, .indexImg-2, .indexImg-3 {
+    position: relative;
+    opacity: 0.95;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.indexImg-1 {
+    background-image: url(../imgs/Waitress.png);
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.indexImg-2 {
+    background-image: url(../imgs/dreamstime_m_63793285.jpg);
+    min-height: 100%;
+}
+
+.indexImg-3 {
+    background-image: url(../imgs/champagner-toasting-new-year-s-eve-drink.jpg);
+    min-height: 100%;
+}
+*/
