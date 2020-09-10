@@ -1,11 +1,11 @@
 body {
-  font-family: "Open Sans", "sans-serif";
+  font-family: "Taviraj", "sans-serif";
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to right, #bd0d0de5, #192985e1); }
 
 h1, h2, h3 {
-  font-family: "Solway", "serif"; }
+  font-family: "Work Sans", "serif"; }
 
 h2 {
   font-style: italic; }
@@ -26,55 +26,91 @@ h2 {
   border-bottom: 1px ridge;
   min-height: 200px; }
 
-.pad-section {
-  padding: 50px 0; }
-
-#indexImg-1, #indexImg-2 {
-  display: table;
-  height: 100%;
-  position: relative;
+.indexImg {
   width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  min-height: 50vw;
+  padding: 1rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover; }
 
 #indexImg-1 {
-  background: url(../imgs/restaurant-alcohol-bar-drinks.png) no-repeat center center fixed;
-  height: 30rem; }
+  background-image: url(../imgs/restaurant-alcohol-bar-drinks.png); }
 
 #indexImg-2 {
-  background: url(../imgs/beertaps.png) no-repeat center center fixed;
-  height: 30rem; }
+  background-image: url(../imgs/beertaps.png); }
+
+#indexPitch p {
+  padding-left: 1rem; }
+
+#indexPitch i {
+  margin-left: -1.25rem; }
 
 .footerLogo {
   height: auto;
-  width: 1rem; }
+  width: 2rem;
+  max-width: 130px; }
+
+.faq, .faq-large {
+  position: relative;
+  height: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden; }
+
+.faq div {
+  height: 100%;
+  position: absolute;
+  width: 100%; }
+
+.faq-large div {
+  height: 100%;
+  position: absolute;
+  width: 100%; }
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.faq-answer {
+  transform-origin: center bottom;
+  transform: rotateX(-90deg);
+  transition-duration: 1.5s;
+  visibility: hidden; }
+
+.faq-answer > p {
+  transform: rotateX(180deg); }
+
+.faq:hover {
+  min-height: 15rem; }
+
+.faq-large:hover {
+  min-height: 25rem; }
+
+.faq:hover > div {
+  height: 50%; }
+
+.faq-large:hover div {
+  height: 50%; }
 
 /*
-.indexImg-1, .indexImg-2, .indexImg-3 {
-    position: relative;
-    opacity: 0.95;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.faq-large:hover .faq-question {
+    height: 25%;
 }
 
-.indexImg-1 {
-    background-image: url(../imgs/Waitress.png);
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-}
-
-.indexImg-2 {
-    background-image: url(../imgs/dreamstime_m_63793285.jpg);
-    min-height: 100%;
-}
-
-.indexImg-3 {
-    background-image: url(../imgs/champagner-toasting-new-year-s-eve-drink.jpg);
-    min-height: 100%;
+.faq-large:hover > .faq-answer {
+    height: 75%;
 }
 */
+.faq:hover > div.faq-answer {
+  transform: perspective(600px) rotate3d(1, 0, 0, 180deg);
+  visibility: visible; }
+
+.faq-large:hover > div.faq-answer {
+  transform: perspective(600px) rotate3d(1, 0, 0, 180deg);
+  visibility: visible; }

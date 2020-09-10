@@ -7,62 +7,64 @@
       <!-- build:css css/main.css -->
       <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
       <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-      <link rel="stylesheet" href="css/main.css" />
+      <link rel="stylesheet" href="css/main1.css" />
 	  <!-- endbuild -->
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Solway|Open+Sans" />
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans|Taviraj" />
 	  
 	  <title>Tennessee ABC Cards</title>
 	</head>
 	<body class="text-light">
 		<header class="jumbotron jumbotron-fluid">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-4 col-sm-2 col-md-2 align-self-center">
-							<a href="index.html"><img src="imgs/TABCC+logo.png" class="img-fluid" /></a>
-						</div>
-						<div class="col-sm-9 align-self-center">
-							<h1>Tennessee ABC Cards</h1>
-							<h2 class="d-none d-sm-block">Tennessee's #1 Online Server Training Program</h2>
-						</div>
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-sm-3 align-self-center">
+						<a href="index.html"><img src="imgs/TABCC+logo.png" class="img-fluid ml-md-2 mt-1 rounded-circle" /></a>
+					</div>
+					<!-- 1 Column spacing between columns on Medium and up -->
+					<div class="d-none d-sm-block col-sm-1"></div>
+					<div class="col-sm-8 align-self-center">
+						<h1>Tennessee ABC Cards</h1>
+						<h2 class="d-none d-sm-block">Tennessee's #1 Online Server Training Program</h2>
 					</div>
 				</div>
-			</header>
+			</div>
+		</header>
 		<!-- navbar -->
-		<nav class="navbar navbar-expand-sm navbar-light sticky-top">
+		<nav class="navbar navbar-expand-md navbar-light sticky-top">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#"><img src="imgs/TABCC+logo.png" height="40" width="55" /></a>
+				<a class="navbar-brand d-none d-sm-block" href="#"><img src="imgs/TABCC+logo_tb.png" height="40" width="55" /></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="navbar-nav">
 						<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="info.html">Why Take This Class</a></li>
+<!--					<li class="nav-item"><a class="nav-link" href="#">Why Take This Class</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+-->						<li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 					</ul>
 				</div><!-- .navbar-collapse -->
-				<div type="button" class="btn btn-sm ml-auto" id="orderNowButton">
+				<div type="button" class="btn ml-auto" id="orderNowButton">
 					<i class="fa fa-shopping-cart"></i> Order Now
 				</div>
 			</div><!-- .container-fluid -->
 		</nav>
 
 		<!-- first section -->
-		<div id="indexImg-1" class="indexImg-1 pad-section"></div>
+		<div id="indexImg-1" class="indexImg img-fluid"></div>
 		<!-- end first section -->
 		<!-- second section -->
-		<div id="indexPitch" class="pad-section">
+		<div id="indexPitch">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 text-center align-self-center">
 						<h2>Get Your Server Permit Online!<br/><br/>Only $29</h2>
 					</div>
-					<!-- 2 Column spacing between columns on Medium and up -->
-					<div class="d-none d-sm-block col-md-1"></div>
-					<div class="col-sm-7">
+					<!-- 1 Column spacing between columns on Medium and up -->
+					<div class="d-none d-sm-block col-sm-1"></div>
+					<div class="col-sm-7 mt-3">
 						<p><i class="fa fa-beer"></i>  THE CHEAPEST AND EASIEST WAY TO GET A SERVER PERMIT</p>
 						<p><i class="fa fa-beer"></i>  WATCH THE VIDEOS, TAKE THE TEST AND YOU’RE DONE!</p>
 						<p><i class="fa fa-beer"></i>  MOBILE FRIENDLY - CLASS WORKS ON ANY DEVICE</p>
@@ -77,14 +79,14 @@
 		</div>
 		<!-- end second section -->
 		<!-- third section -->
-		<div id="indexImg-2" class="pad-section img-responsive"></div>
+		<div id="indexImg-2" class="indexImg img-fluid"></div>
 		<!-- end third section -->
 		<!-- fourth section -->
-		<div id="indexCert" class="pad-section">
-			<div class="container-fluid">
+		<div id="indexCert">
+			<div class="container py-4">
 				<div class="row">
-					<div class="col-md-5 align-self-center text-center text-lg-right">
-						<img class="w-75 pl-lg-5" src="imgs/ABCLogo.png" alt="Tennessee Alcoholic Beverage Commission" />
+					<div class="col-md-5 align-self-center text-lg-left">
+						<img class="img-fluid" src="imgs/ABCLogo.png" alt="Tennessee Alcoholic Beverage Commission" />
 					</div>
 					<div class="col align-self-center offset-lg-1 text-left">
 						<p>This program has been certified by the Tennessee Alcoholic Beverage Commission as currently satisfying the requirements of the 1995 Server Training Act</p>
@@ -97,9 +99,9 @@
 		<footer>
 			<hr />
 			<div class="container">
-				<div class="row justify-content-between">
-					<img src="imgs/footer-starball.png" class="col-sm-2 footerLogo">
-					<p class="text-right">Copyright &copy; TN ABC Cards 2019</p>
+				<div class="row mb-3 justify-content-between">
+					<img src="imgs/footer-starball.png" class="col-2 align-self-center footerLogo">
+					<p class="text-right m-3 align-self-center">Copyright &copy; TN ABC Cards 2020</p>
 				</div>
 			</div>
 		</footer>	
@@ -108,7 +110,6 @@
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
 		<!-- endbuild -->
 
 	</body>

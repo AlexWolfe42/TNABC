@@ -75,77 +75,57 @@ h2 {
     max-width: 130px;
 }
 
-.faq, .faq-large {
-    position: relative;
-    height: 5rem;
-    width: 80%;
-    margin: 0 auto;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    overflow: hidden;
-}
-
-.faq div {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-
-.faq-large div {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-
 .faq-question {
+    box-sizing: border-box;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    } h3 {
+        text-align: center;
+    }
+
+.faq-question:hover {
+    cursor: pointer;
 }
 
-.faq-answer {
-    transform-origin: center bottom;
-    transform: rotateX(-90deg);
-    transition-duration: 1.5s;
-    visibility: hidden;
+.faqs {
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    transform: rotate3d(0, 1, 0, 0deg);
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+
+    .faq {
+        width: 80%;
+        margin: 0 auto;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+    
+        .faq-answer {
+            -webkit-transform: rotate3d(1, 0, 0, -90deg);
+            transform: rotate3d(1, 0, 0, -90deg);
+            -webkit-transform-origin: center top;
+            transform-origin: center top;
+            -webkit-transition-duration: 0.75s;
+            transition-duration: 0.75s;
+            visibility: hidden;
+            
+/*            p {
+                transform: rotateX(180deg);
+            }
+*/        }
+    }
 }
 
-.faq-answer > p {
-    transform: rotateX(180deg);
-}
-
-.faq:hover {
-    min-height: 15rem;
-}
-
-.faq-large:hover {
-    min-height: 25rem;
-}
-
-.faq:hover > div {
-    height: 50%;
-}
-
-.faq-large:hover  div {
-    height: 50%;
-}
-
-/*
-.faq-large:hover .faq-question {
-    height: 25%;
-}
-
-.faq-large:hover > .faq-answer {
-    height: 75%;
-}
-*/
-.faq:hover > div.faq-answer {
-    transform: perspective(600px) rotate3d(1, 0, 0, 180deg);
-    visibility: visible;
-//    overflow: auto;
-}
-
-.faq-large:hover > div.faq-answer {
-    transform: perspective(600px) rotate3d(1, 0 , 0, 180deg);
-    visibility: visible;
+.reveal {
+    -webkit-transform: perspective(600px) rotate3d(1, 0, 0, 0deg) !important;
+    transform: perspective(600px) rotate3d(1, 0, 0, 0deg) !important;
+    visibility: visible !important;
 }
