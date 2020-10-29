@@ -1,7 +1,7 @@
-$color-primary: #192985e1;
-$color-secondary: #bd0d0de5;
-$color-pale: #e9ecefd2;
-$color-dark: #420000;
+$color-primary: #192985;
+$color-secondary: #bd0d0d;
+$color-pale: #e9ecef;
+$color-dark: #4200;
 $color-transparent-black: rgba(0,0,0,0.5);
 
 $header-font: "Work Sans", "serif";
@@ -11,7 +11,10 @@ body {
     font-family: $body-font;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, $color-secondary, $color-primary);
+    background-image: linear-gradient(45deg, $color-secondary, darken( $color-secondary, 10% ), $color-primary, darken( $color-primary, 10% ));
+    background-size: 300%, 100%;
+    animation: gradient 8s linear infinite;
+    animation-direction: alternate;
 }
 
 h1, h2, h3 {
@@ -25,8 +28,16 @@ h2 {
 .jumbotron {
     margin: 0;
     padding: 30px;
-    background-image: linear-gradient(to right, $color-primary, $color-secondary);
+    background-image: linear-gradient(-45deg, $color-primary, lighten( $color-primary, 5% ), $color-secondary, lighten( $color-secondary, 5% ));
+    background-size: 300%, 100%;
+    animation: gradient 8s linear infinite;
+    animation-direction: alternate;
     color: white;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% }
+    100% { background-position: 100%}
 }
 
 .navbar {
@@ -126,8 +137,118 @@ h2 {
     visibility: visible !important;
 }
 
+@keyframes spinFromTop {
+    0% {
+      -webkit-transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 720deg) translate3d(0em, 20em, 40em);
+      transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 720deg) translate3d(0em, 20em, 20em); 
+    }
+    25% {
+        -webkit-transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 540deg) translate3d(0em, 15em, 30em);
+        transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 540deg) translate3d(0em, 15em, 15em);
+    }
+    50% {
+      -webkit-transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 360deg) translate3d(0em, 10em, 20em);
+      transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 360deg) translate3d(0em, 10em, 10em); 
+    }
+    75% {
+          -webkit-transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 180deg) translate3d(0em, 5em, 10em);
+      transform: rotate3d(1, 0, 0, 80deg) rotate3d(0, 0, 1, 180deg) translate3d(0em, 5em, 5em);
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 0, 0, 0deg) rotate3d(0, 0, 1, 0deg) translate3d(0em, 0em, 0em);
+      transform: rotate3d(1, 0, 0, 0deg) rotate3d(0, 0, 1, 0deg) translate3d(0em, 0em, 0em);
+    }
+  }
+  
+.modalAnimation1 {
+    animation-name: spinFromTop;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes floatDown {
+    0% {
+        -webkit-transform: translate(-20em, -20em);
+        transform: translate(-20em, -20em);
+    }
+    25% {
+        -webkit-transform: translate(20em, -13em);
+        transform: translate(20em, -13em);
+    }
+    50% {
+        -webkit-transform: translate(-15em, -10em);
+        transform: translate(-15em, -10em);
+    }
+    75% {
+        -webkit-transform: translate(-8em, -5em);
+        transform: translate(-8em, -5em);
+    }
+    100% {
+        -webkit-transform: translate(0em, 0em);
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes swing {
+    0% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    25% {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    75% {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+.modalAnimation2-float {
+    top: 10em;
+//    animation: floatDown 5s linear, swing 5s linear;
+    animation-name: floatDown;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+.modalAnimation2-swing {
+    animation-name: swing;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes spinny {
+    0% {
+        transform: rotate(0deg) scale(0.1, 0.1);
+    }
+    50% {
+        transform: rotate(1080deg) scale(0.5, 0.5);
+    }
+    100% {
+        transform: rotate(1440deg) scale(1.0, 1.0);
+    }
+}
+
+.modalAnimation3 {
+    animation-name: spinny;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
 #orderModal {
-    background-image: linear-gradient(to right, $color-primary, $color-secondary);
+    background-image: linear-gradient(-45deg, rgba($color-primary, 0.5), rgba(lighten( $color-primary, 10% ), 0.5), rgba($color-secondary, 0.5), rgba(lighten( $color-secondary, 10% ), 0.5));
+    background-size: 300%, 100%;
+    animation: gradient 8s linear infinite;
+    animation-direction: alternate;
     .modal-header {
         background-color: $color-primary;
     }
