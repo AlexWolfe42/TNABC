@@ -20,4 +20,8 @@ $(function() {
         $(this).css('height', faqHeight + 'px');
         $(this).find('.faq-answer').addClass('reveal');
     });
+
+    if ((navigator.userAgent.indexOf(/IE/i) > -1) || (navigator.userAgent.indexOf("Trident") > -1)) {
+        $('#orderModal').find('.btn-secondary').removeClass('ml-auto');
+    }
 });
